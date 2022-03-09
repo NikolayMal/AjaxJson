@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <button type="button" onclick="oncallPopup()">What is this website about?</button>
+    <div class="popup" id="oncallPopup">
+      <div class="overlay"></div>
+        <div class="content">
+          <div class="close-btn" onclick="oncallPopup()">&times;</div>
+          <h1>NodeJS, Ajax, JSON</h1>
+          <p>This page has many functionalities; one of them being that the json files are loaded and you can see the table with all of the information at the click of a button.</p>
+          <div onclick="oncallPopup()"><p class="inPopupText">Click here to continue the page...</p></div>
+      </div>
+    </div>
+
+    <script src="js/script.js"></script>
+
+    <div id="demo">
+    <h2>Labaratory Sheet 3</h2>
+    </div>
+    <button type="button" onclick="loadDoc()">Load information about labsheet 3</button>
+
+    <div id="showLoad">
+      <h2>The Table</h2>
+    </div>
+
+    <button type="button" onclick="loadtablebutton()">Load all the files and create table...</button>
+
+    <div id="dataShow">
+      <h2>Data</h2>
+    </div>
+
+    <input type="button" onclick="tableCreate(tableLimiter=true), loadtablebutton " value="Load the start of the table" />
+    <input type="button" onclick="tableCreate(tableLimiter=false)" value="Load whole table" />
+    <input id="tableToggle"type="button" onclick="toggleTable()" value="Hide the Table" />
+
+    <div id="toggleTable" class="toggleTable" style="display:block">
+      <p id="showData"></p>
+    </div>
+    
+  </body>
+  <style>
+    showData.table {
+      margin-left: auto;
+      margin-right: auto;
+      font-size: 10px;
+      width: 100%;
+      table-layout:fixed;
+    }
+    .popup .overlay {
+      position:fixed;
+      top:0px;
+      left:0px;
+      width:100vw;
+      height:100vh;
+      background:rgba(0,0,0,0.7);
+      z-index:1;
+      display:none;
+    }
+
+    .popup .content {
+      position:absolute;
+      top:50%;
+      left:50%;
+      transform:translate(-50%,-50%) scale(0);
+      background:#fff;
+      width:500px;
+      height:250px;
+      z-index:2;
+      text-align:center;
+      padding:20px;
+      box-sizing:border-box;
+      font-family:"Open Sans",sans-serif;
+    }
+
+    .popup .close-btn {
+      cursor:pointer;
+      position:absolute;
+      right:20px;
+      top:20px;
+      width:30px;
+      height:30px;
+      background:#222;
+      color:#fff;
+      font-size:25px;
+      font-weight:600;
+      line-height:30px;
+      text-align:center;
+      border-radius:50%;
+    }
+
+    .popup.active .overlay {
+      display:block;
+    }
+
+    .popup.active .content {
+      transition:all 300ms ease-in-out;
+      transform:translate(-50%,-50%) scale(1);
+    }
+
+    button {
+      padding:10px;
+      font-size:11px;
+      border:2px solid #222;
+      color:#222;
+      text-transform:uppercase;
+      font-weight:600;
+      background:#fff;
+    }
+
+    .inPopupText {
+    font-family: Arial;
+    font-size: 14px;
+    font-style: italic;
+    font-weight: bold;
+    text-decoration: underline;
+    text-transform: none;
+    font-variant: small-caps;
+    color: blue;
+    background-color: #ffffff;
+    }
+
+  </style>
+</html>

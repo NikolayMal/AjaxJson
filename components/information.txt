@@ -1,0 +1,13 @@
+<h3>Summary</h3>
+<p>This website uses ajax and jquery to update elements on the page.</p>
+<p>You can load a table from json files located in '/country-objects'</p>
+<p>If you would like, you can hide and unhide it or show more than 20 rows.<p>
+
+<h4>AJAX</h4>
+<p>AJAX is not a programming language.</p>
+<p>AJAX is a technique for accessing web servers from a web page.</p>
+<p>AJAX stands for Asynchronous JavaScript And XML.</p>
+
+<h4>NodeJS</h4>
+<p>This page uses NodeJS.</p>
+<p>It is a backend JavaScript runtime environment which executes JavaScript code outside of the browser.</p>
